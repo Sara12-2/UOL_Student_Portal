@@ -1,70 +1,18 @@
-# 🎓 University Student Portal
+# University of Layyah - Student Portal (Web Technologies Lab Task 7)
 
-A **responsive and interactive** University Student Portal website built as part of the **Web Technologies Lab Task #7** at the **University of Layyah, Pakistan**.
+Open `index.html` in a browser (internet needed for Bootstrap, icons and fonts CDN).
+Put your university logo at `images/logo.png`; it replaces the placeholder in the navbar and footer.
 
-The website provides university information, displays available courses, allows students to register, and includes multiple interactive JavaScript features. It is fully responsive across **desktop, tablet, and mobile** screens.
+## Files
+- index.html - structure, Bootstrap components (navbar, cards, modal, accordion, alerts, tables)
+- style.css - custom theme (white, green, orange), sticky header, media query, dark mode
+- script.js - clock, heading change, dark mode, validation, registration, add/search/count courses, Local Storage
 
----
+## LLM usage (write this in your submission)
+Claude (Anthropic) was used to generate the first version of the code and to explain it. I tested the features myself and can explain every function.
 
-## 🎨 Theme
-
-The website follows the **University of Layyah** official colour scheme:
-
-| Colour | Hex | Usage |
-|--------|-----|-------|
-| 🟢 Primary Green (major) | `#0B6E4F` | Navbar, footer, headings, buttons |
-| 🟠 Accent Orange (minor) | `#F39C12` | Hover effects, CTAs, accents |
-| ⚪ Background | `#F8F9FA` | Page background |
-| ⚫ Text | `#212529` | Body text |
-
----
-
-## 🚀 Features
-
-### HTML5
-- Semantic structure (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`)
-- Navigation links, hero section, about, courses, registration form, footer
-- Table with `rowspan` and `colspan`
-- Form with multiple input types, `required` and `placeholder` attributes
-- Images with `alt` text, ordered & unordered lists
-
-### CSS3
-- External stylesheet (`style.css`) with element, class & ID selectors
-- Flexbox & CSS Grid for layout
-- `position: sticky` navbar
-- Hover effects on nav links and buttons
-- `border-radius` & `box-shadow`
-- Responsive media queries
-- **Dark/Light mode** support
-
-### Bootstrap 5
-- Responsive navbar with collapse (hamburger menu)
-- Container, row & column grid system
-- Course cards (`col-md-6 col-lg-4`)
-- Buttons, forms, tables, and alerts
-- **Modal** for registration confirmation
-- **Accordion** for FAQs
-
-### JavaScript
-1. ✅ Display current date & time
-2. ✅ Change website heading on button click
-3. ✅ Dark/Light mode toggle
-4. ✅ Registration form validation
-5. ✅ Display student name after successful registration
-6. ✅ Add new course dynamically
-7. ✅ Course search functionality
-8. ✅ Count and display total available courses
-9. ✅ Save registered student info in **LocalStorage**
-
----
-
-## 🛠️ Technologies Used
-
-- **HTML5**
-- **CSS3**
-- **Bootstrap 5** (via CDN)
-- **Vanilla JavaScript** (ES6)
-- **LocalStorage API**
-
----
-
+## Viva quick notes
+- id vs class: id is unique on a page (#id, one element); class can be reused on many elements (.class).
+- Bootstrap grid: 12 columns; breakpoints xs (<576px), sm (>=576), md (>=768), lg (>=992), xl (>=1200), xxl (>=1400).
+- let vs const: let can be reassigned; const cannot be reassigned (objects/arrays can still change inside).
+- DOM manipulation: see addCourse() (createElement + appendChild), changeHeading() (textContent), searchCourses() (classList.toggle).
