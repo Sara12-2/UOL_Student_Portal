@@ -3,37 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="University of Layyah Student Portal - courses, registration and student services.">
-  <title>University of Layyah | Student Portal</title>
+  <meta name="description" content="University of Layyah Student Portal — browse courses, register online, and access student services.">
+  <title>University of Layyah · Student Portal</title>
+
+  <!-- Bootstrap 5.3 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Icons + fonts -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Custom CSS -->
   <link href="style.css" rel="stylesheet">
 </head>
-<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="-30% 0px -60% 0px" data-bs-smooth-scroll="true" tabindex="0">
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-root-margin="-40% 0px -55% 0px" data-bs-smooth-scroll="true" tabindex="0">
 
-  <!-- ===== HEADER + NAVBAR ===== -->
-  <header id="siteHeader" class="site-header">
+  <!-- ========== NAVBAR ========== -->
+  <header class="site-header">
     <nav class="navbar navbar-expand-lg">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
-          <!-- Replace images/logo.png with your university logo -->
-          <span class="logo-slot"><i class="bi bi-image"></i><img src="images/logo.png" alt="University of Layyah logo" onerror="this.style.display='none'"></span>
-          <span class="brand-text"><strong>University of Layyah</strong><small>Student Portal</small></span>
+          <!-- University Logo Image (Place your logo in images folder as logo.png) -->
+          <img src="images/logo.png" alt="University of Layyah Logo" class="brand-logo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+          <span class="brand-mark" style="display:none;"><i class="bi bi-mortarboard-fill"></i></span>
+          
+          <span class="brand-text">
+            <strong>University of Layyah</strong>
+            <small>Student Portal</small>
+          </span>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-          <i class="bi bi-list fs-2"></i>
+
+        <button class="navbar-toggler border-0 shadow-none" type="button"
+                data-bs-toggle="collapse" data-bs-target="#navMenu"
+                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+          <i class="bi bi-list fs-1"></i>
         </button>
+
         <div class="collapse navbar-collapse" id="navMenu">
           <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1" id="mainNav">
-            <li class="nav-item"><a class="nav-link" href="#home"><i class="bi bi-house-door"></i> Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle"></i> About</a></li>
-            <li class="nav-item"><a class="nav-link" href="#courses"><i class="bi bi-journal-bookmark"></i> Courses</a></li>
-            <li class="nav-item"><a class="nav-link" href="#registration"><i class="bi bi-pencil-square"></i> Registration</a></li>
-            <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope"></i> Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="#home"><i class="bi bi-house-door me-1"></i>Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-info-circle me-1"></i>About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#courses"><i class="bi bi-journal-bookmark me-1"></i>Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#registration"><i class="bi bi-pencil-square me-1"></i>Registration</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-envelope me-1"></i>Contact</a></li>
           </ul>
-          <button id="themeToggle" class="btn btn-outline-green ms-lg-3 mt-2 mt-lg-0" type="button" aria-label="Switch dark or light mode">
-            <i class="bi bi-moon-stars-fill" id="themeIcon"></i> <span id="themeLabel">Dark mode</span>
+          <button id="themeToggle" class="btn btn-icon ms-lg-3 mt-3 mt-lg-0" type="button" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars-fill" id="themeIcon"></i>
+            <span id="themeLabel" class="d-none d-lg-inline ms-1">Dark</span>
           </button>
         </div>
       </div>
@@ -41,27 +55,53 @@
   </header>
 
   <main>
-    <!-- ===== HERO ===== -->
+    <!-- ========== HERO ========== -->
     <section id="home" class="hero">
-      <div class="container">
+      <div class="hero-glow"></div>
+      <div class="container position-relative">
         <div class="row align-items-center g-5">
           <div class="col-lg-7">
-            <p class="hero-tag"><i class="bi bi-mortarboard-fill"></i> Department of Computer Science</p>
-            <h1 id="mainHeading" class="hero-title">Learn. Build. Lead.</h1>
-            <p class="lead hero-text">Browse courses, register as a student and keep everything about your semester in one place. Built for the students of <strong>University of Layyah</strong>.</p>
+            <span class="eyebrow"><i class="bi bi-mortarboard-fill"></i> Department of Computer Science</span>
+            <h1 id="mainHeading" class="hero-title">
+              Learn. Build. <span class="text-gradient">Lead.</span>
+            </h1>
+            <p class="lead hero-text">
+              Browse courses, register as a student, and manage your semester — all in one place.
+              Built for the students of <strong>University of Layyah</strong>.
+            </p>
             <div class="d-flex flex-wrap gap-2">
-              <a href="#registration" class="btn btn-orange btn-lg"><i class="bi bi-person-plus-fill"></i> Register now</a>
-              <button id="headingBtn" type="button" class="btn btn-outline-green btn-lg"><i class="bi bi-arrow-repeat"></i> Change heading</button>
+              <a href="#registration" class="btn btn-primary btn-lg">
+                <i class="bi bi-person-plus-fill me-1"></i> Register now
+              </a>
+              <button id="headingBtn" type="button" class="btn btn-ghost btn-lg">
+                <i class="bi bi-arrow-repeat me-1"></i> Change heading
+              </button>
             </div>
           </div>
+
           <div class="col-lg-5">
             <aside class="portal-card">
               <p class="portal-card-label"><i class="bi bi-clock-history"></i> Today at the portal</p>
-              <div id="liveDateTime" class="live-clock">Loading...</div>
-              <div id="heroGreeting" class="hero-greeting"><i class="bi bi-person-circle"></i> <span>Register to get your portal access.</span></div>
+              <div id="liveDateTime" class="live-clock">Loading…</div>
+              <div id="heroGreeting" class="hero-greeting">
+                <i class="bi bi-person-circle"></i>
+                <span>Register to get your portal access.</span>
+              </div>
               <div class="row g-2">
-                <div class="col-6"><div class="stat"><i class="bi bi-journal-text"></i><strong class="course-total">0</strong><span>Courses available</span></div></div>
-                <div class="col-6"><div class="stat stat-orange"><i class="bi bi-people-fill"></i><strong id="studentTotal">0</strong><span>Students registered</span></div></div>
+                <div class="col-6">
+                  <div class="stat">
+                    <i class="bi bi-journal-text"></i>
+                    <strong class="course-total">0</strong>
+                    <span>Courses</span>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <div class="stat stat-accent">
+                    <i class="bi bi-people-fill"></i>
+                    <strong id="studentTotal">0</strong>
+                    <span>Students</span>
+                  </div>
+                </div>
               </div>
             </aside>
           </div>
@@ -69,170 +109,338 @@
       </div>
     </section>
 
-    <!-- ===== ABOUT ===== -->
+    <!-- ========== ABOUT (Redesigned) ========== -->
     <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">About the university</h2>
-        <div class="row g-4 align-items-center">
+        <div class="section-head">
+          <span class="section-tag">About Us</span>
+          <h2 class="section-title">Excellence in Education</h2>
+          <p class="section-sub">Empowering students with practical knowledge and academic excellence.</p>
+        </div>
+
+        <div class="row g-5 align-items-center">
+          <!-- Left side: Brief Text -->
           <div class="col-lg-6">
-            <article>
-              <h3 class="h4">Education that serves the community</h3>
-              <p>The <strong>University of Layyah</strong> is a public sector university in <em>Layyah, Punjab, Pakistan</em>. Our departments focus on <mark>practical, industry-ready learning</mark> alongside strong academic foundations.</p>
-              <p>This portal helps students <u>view courses</u>, <small>(read the class schedule)</small> and complete their registration online. Visit the <a href="#courses">course list</a> to get started.</p>
-              <div class="row">
-                <div class="col-sm-6">
-                  <h4 class="h6 fw-bold">Why study with us</h4>
-                  <ul class="icon-list">
-                    <li>Experienced faculty</li>
-                    <li>Modern computer labs</li>
-                    <li>Active student societies</li>
-                  </ul>
+            <div class="about-content">
+              <h3 class="h4 mb-3">Shaping the Future of Layyah</h3>
+              <p class="text-muted mb-4">
+                Established in 2022, the <strong>University of Layyah</strong> is dedicated to providing high-quality, 
+                industry-ready education. We focus on fostering innovation and community service.
+              </p>
+              
+              <div class="highlight-box">
+                <div class="row g-3">
+                  <div class="col-sm-6">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill text-green"></i>
+                      <span>Experienced Faculty</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill text-orange"></i>
+                      <span>Modern Labs</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill text-green"></i>
+                      <span>Active Societies</span>
+                    </div>
+                  </div>
+                  <div class="col-sm-6">
+                    <div class="feature-item">
+                      <i class="bi bi-check-circle-fill text-orange"></i>
+                      <span>Industry Ready</span>
+                    </div>
+                  </div>
                 </div>
-                <div class="col-sm-6">
-                  <h4 class="h6 fw-bold">How to join</h4>
-                  <ol>
-                    <li>Choose a course</li>
-                    <li>Fill the registration form</li>
-                    <li>Confirm in the pop-up</li>
-                  </ol>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right side: Visual/Steps -->
+          <div class="col-lg-6">
+            <div class="steps-card">
+              <h4 class="h6 text-uppercase text-muted fw-bold mb-3">How to Join</h4>
+              <div class="step-item">
+                <div class="step-number bg-orange">1</div>
+                <div class="step-text">
+                  <h5>Choose a Course</h5>
+                  <p>Browse our available programs and select your desired course.</p>
                 </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number bg-green">2</div>
+                <div class="step-text">
+                  <h5>Fill the Form</h5>
+                  <p>Complete the online registration form with your accurate details.</p>
+                </div>
+              </div>
+              <div class="step-item">
+                <div class="step-number bg-orange">3</div>
+                <div class="step-text">
+                  <h5>Get Confirmation</h5>
+                  <p>Receive instant confirmation and access your student portal.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Weekly Schedule (Better Styled) -->
+        <div class="mt-5 pt-4">
+          <h3 class="h5 mb-3 fw-bold">Weekly Class Schedule</h3>
+          <div class="table-responsive schedule-wrapper">
+            <table class="table schedule-table align-middle mb-0">
+              <thead>
+                <tr>
+                  <th rowspan="2">Day</th>
+                  <th colspan="2">Morning Lectures</th>
+                  <th rowspan="2">Lab Session</th>
+                </tr>
+                <tr>
+                  <th>9:00 AM - 10:30 AM</th>
+                  <th>11:00 AM - 12:30 PM</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">Monday</th>
+                  <td>Web Technologies</td>
+                  <td>Operating Systems</td>
+                  <td><span class="badge lab-badge-orange">Web Lab</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Tuesday</th>
+                  <td>Data Structures</td>
+                  <td>Analysis of Algorithms</td>
+                  <td><span class="badge lab-badge-green">DS Lab</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Wednesday</th>
+                  <td>Database Systems</td>
+                  <td>Web Technologies</td>
+                  <td><span class="badge lab-badge-orange">DB Lab</span></td>
+                </tr>
+                <tr>
+                  <th scope="row">Friday</th>
+                  <td colspan="3" class="text-center text-muted fw-semibold">Self-study and Society Activities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== COURSES (Redesigned & Well Managed) ========== -->
+    <section id="courses" class="section section-alt">
+      <div class="container">
+        <div class="section-head d-flex flex-wrap justify-content-between align-items-end gap-3">
+          <div>
+            <span class="section-tag">Courses</span>
+            <h2 class="section-title mb-1">Available Programs</h2>
+            <p class="section-sub mb-0">Explore our curriculum designed for the modern tech industry.</p>
+          </div>
+          <span class="count-pill">
+            <i class="bi bi-collection"></i> Total Courses: <strong class="course-total">0</strong>
+          </span>
+        </div>
+
+        <!-- Search & Add Form (Cleaner Layout) -->
+        <div class="row g-4 mb-5">
+          <div class="col-lg-5">
+            <div class="tool-card">
+              <label for="courseSearch" class="form-label fw-bold"><i class="bi bi-search text-green"></i> Find a Course</label>
+              <div class="input-group search-group">
+                <input type="search" id="courseSearch" class="form-control" placeholder="Type name or code (e.g. CS-231)">
+                <span class="input-group-text"><i class="bi bi-search"></i></span>
+              </div>
+              <p id="searchInfo" class="small text-muted mt-2 mb-0"></p>
+            </div>
+          </div>
+
+          <div class="col-lg-7">
+            <div class="tool-card">
+              <form id="addCourseForm" class="add-course" novalidate>
+                <label class="form-label fw-bold"><i class="bi bi-plus-circle-fill text-orange"></i> Add New Course</label>
+                <div class="row g-2">
+                  <div class="col-sm-5">
+                    <input type="text" id="newCourseName" class="form-control" placeholder="Course Name" required>
+                  </div>
+                  <div class="col-sm-3">
+                    <input type="text" id="newCourseCode" class="form-control" placeholder="Code" required>
+                  </div>
+                  <div class="col-sm-2">
+                    <input type="number" id="newCourseHours" class="form-control" placeholder="Hrs" min="1" max="4" required>
+                  </div>
+                  <div class="col-sm-2 d-grid">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                  </div>
+                </div>
+                <div id="addCourseMsg" class="small mt-2"></div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course Cards Grid -->
+        <div class="row g-4" id="courseList">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-orange-light">
+                <div class="course-icon bg-orange"><i class="bi bi-code-slash"></i></div>
+                <span class="course-code text-orange">CS-101</span>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Programming Fundamentals</h3>
+                <p class="card-text">Start coding with variables, loops, functions, and problem-solving techniques.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>3 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
               </div>
             </article>
           </div>
-          <div class="col-lg-6">
-            <img src="images/campus.svg" class="img-fluid about-img" alt="Illustration of a university building with trees and a rising sun">
-          </div>
-        </div>
 
-        <h3 class="h5 mt-5 mb-3">Sample weekly class schedule</h3>
-        <div class="table-responsive">
-          <table class="table table-bordered table-hover text-center align-middle schedule">
-            <thead>
-              <tr><th rowspan="2">Day</th><th colspan="2">Lectures</th><th rowspan="2">Lab</th></tr>
-              <tr><th>9:00 AM</th><th>11:00 AM</th></tr>
-            </thead>
-            <tbody>
-              <tr><th scope="row">Monday</th><td>Web Technologies</td><td>Operating Systems</td><td>Web Lab</td></tr>
-              <tr><th scope="row">Tuesday</th><td>Data Structures</td><td>Analysis of Algorithms</td><td>DS Lab</td></tr>
-              <tr><th scope="row">Wednesday</th><td>Database Systems</td><td>Web Technologies</td><td>Database Lab</td></tr>
-              <tr><th scope="row">Friday</th><td colspan="3">Self-study and society activities</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== COURSES ===== -->
-    <section id="courses" class="section section-tint">
-      <div class="container">
-        <div class="d-flex flex-wrap justify-content-between align-items-end gap-3 mb-4">
-          <h2 class="section-title mb-0">Available courses</h2>
-          <span class="count-pill"><i class="bi bi-collection"></i> Total courses: <strong class="course-total">0</strong></span>
-        </div>
-
-        <div class="row g-3 mb-4">
-          <div class="col-lg-5">
-            <label for="courseSearch" class="form-label fw-bold">Search courses</label>
-            <div class="input-group">
-              <span class="input-group-text"><i class="bi bi-search"></i></span>
-              <input type="search" id="courseSearch" class="form-control" placeholder="Type a name or code, e.g. CS-231">
-            </div>
-            <p id="searchInfo" class="small text-muted mt-2 mb-0"></p>
-          </div>
-          <div class="col-lg-7">
-            <form id="addCourseForm" class="add-course" novalidate>
-              <p class="fw-bold mb-2"><i class="bi bi-plus-circle-fill text-orange"></i> Add a new course</p>
-              <div class="row g-2">
-                <div class="col-sm-5"><input type="text" id="newCourseName" class="form-control" placeholder="Course name" aria-label="Course name" required></div>
-                <div class="col-sm-3"><input type="text" id="newCourseCode" class="form-control" placeholder="Code" aria-label="Course code" required></div>
-                <div class="col-sm-2"><input type="number" id="newCourseHours" class="form-control" placeholder="Hrs" min="1" max="4" aria-label="Credit hours" required></div>
-                <div class="col-sm-2 d-grid"><button type="submit" class="btn btn-green">Add</button></div>
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-green-light">
+                <div class="course-icon bg-green"><i class="bi bi-diagram-3"></i></div>
+                <span class="course-code text-green">CS-201</span>
               </div>
-              <div id="addCourseMsg" class="small mt-2"></div>
-            </form>
+              <div class="card-body">
+                <h3 class="h5 card-title">Data Structures</h3>
+                <p class="card-text">Arrays, linked lists, stacks, queues, trees, and graphs in practical scenarios.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>4 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-orange-light">
+                <div class="course-icon bg-orange"><i class="bi bi-globe2"></i></div>
+                <span class="course-code text-orange">CS-231</span>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Web Technologies</h3>
+                <p class="card-text">Build responsive websites with HTML5, CSS3, Bootstrap, and JavaScript.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>3 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-green-light">
+                <div class="course-icon bg-green"><i class="bi bi-cpu"></i></div>
+                <span class="course-code text-green">CS-301</span>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Operating Systems</h3>
+                <p class="card-text">Processes, scheduling, memory management, and file systems fundamentals.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>3 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-orange-light">
+                <div class="course-icon bg-orange"><i class="bi bi-graph-up-arrow"></i></div>
+                <span class="course-code text-orange">CS-311</span>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Analysis of Algorithms</h3>
+                <p class="card-text">Recurrences, complexity analysis, and algorithm design techniques.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>3 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </article>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-6 col-lg-4 course-item">
+            <article class="card course-card h-100">
+              <div class="card-header-custom bg-green-light">
+                <div class="course-icon bg-green"><i class="bi bi-database"></i></div>
+                <span class="course-code text-green">CS-321</span>
+              </div>
+              <div class="card-body">
+                <h3 class="h5 card-title">Database Systems</h3>
+                <p class="card-text">Relational design, SQL queries, normalization, and transactions.</p>
+              </div>
+              <div class="card-footer">
+                <span class="badge badge-soft"><i class="bi bi-clock me-1"></i>3 Credit Hrs</span>
+                <a href="#registration" class="btn btn-sm btn-enroll">Enroll <i class="bi bi-arrow-right ms-1"></i></a>
+              </div>
+            </article>
           </div>
         </div>
 
-        <div class="row g-4" id="courseList">
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-code-slash"></i></div>
-            <h3 class="h5 card-title">Programming Fundamentals</h3><p class="course-code">CS-101</p>
-            <p class="card-text">Start coding with variables, loops, functions and problem solving.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 3 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
-
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-diagram-3"></i></div>
-            <h3 class="h5 card-title">Data Structures</h3><p class="course-code">CS-201</p>
-            <p class="card-text">Arrays, linked lists, stacks, queues, trees and graphs in practice.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 4 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
-
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-globe2"></i></div>
-            <h3 class="h5 card-title">Web Technologies</h3><p class="course-code">CS-231</p>
-            <p class="card-text">Build responsive websites with HTML5, CSS3, Bootstrap and JavaScript.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 3 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
-
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-cpu"></i></div>
-            <h3 class="h5 card-title">Operating Systems</h3><p class="course-code">CS-301</p>
-            <p class="card-text">Processes, scheduling, memory management and file systems.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 3 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
-
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-graph-up-arrow"></i></div>
-            <h3 class="h5 card-title">Analysis of Algorithms</h3><p class="course-code">CS-311</p>
-            <p class="card-text">Recurrences, complexity analysis and algorithm design techniques.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 3 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
-
-          <div class="col-sm-6 col-lg-4 course-item"><article class="card course-card h-100"><div class="card-body">
-            <div class="course-icon"><i class="bi bi-database"></i></div>
-            <h3 class="h5 card-title">Database Systems</h3><p class="course-code">CS-321</p>
-            <p class="card-text">Relational design, SQL queries, normalization and transactions.</p>
-            <span class="badge badge-green"><i class="bi bi-clock"></i> 3 credit hours</span></div>
-            <div class="card-footer"><a href="#registration" class="btn btn-sm btn-orange">Enroll now</a></div></article></div>
+        <div id="noCourse" class="alert alert-warning d-none mt-4 border-0 shadow-sm" role="alert">
+          <i class="bi bi-exclamation-triangle-fill me-2"></i> No course matches your search. Try a different name or code.
         </div>
-        <div id="noCourse" class="alert alert-warning d-none mt-4" role="alert"><i class="bi bi-exclamation-triangle-fill"></i> No course matches your search. Try a different name or code.</div>
       </div>
     </section>
 
-    <!-- ===== REGISTRATION ===== -->
+    <!-- ========== REGISTRATION ========== -->
     <section id="registration" class="section">
       <div class="container">
-        <h2 class="section-title">Student registration</h2>
+        <div class="section-head">
+          <span class="section-tag">Registration</span>
+          <h2 class="section-title">Register as a Student</h2>
+          <p class="section-sub">Your information is saved locally in this browser — nothing leaves your device.</p>
+        </div>
+
         <div class="row g-4">
           <div class="col-lg-8">
-            <div id="welcomeAlert" class="alert alert-success d-none" role="alert"></div>
-            <form id="regForm" class="reg-card" novalidate>
+            <div id="welcomeAlert" class="alert alert-success d-none border-0 shadow-sm" role="alert"></div>
+
+            <form id="regForm" class="panel" novalidate>
               <div class="row g-3">
                 <div class="col-md-6">
-                  <label for="fullName" class="form-label">Full name</label>
-                  <input type="text" id="fullName" class="form-control" placeholder="e.g. Ayesha Khan" required>
+                  <label for="fullName" class="form-label">Full Name</label>
+                  <input type="text" id="fullName" class="form-control" placeholder="e.g., Ayesha Khan" required>
                   <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6">
-                  <label for="email" class="form-label">Email</label>
+                  <label for="email" class="form-label">Email Address</label>
                   <input type="email" id="email" class="form-control" placeholder="name@example.com" required>
                   <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6">
-                  <label for="phone" class="form-label">Mobile number</label>
+                  <label for="phone" class="form-label">Mobile Number</label>
                   <input type="tel" id="phone" class="form-control" placeholder="03XX-XXXXXXX" required>
                   <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6">
-                  <label for="dob" class="form-label">Date of birth</label>
+                  <label for="dob" class="form-label">Date of Birth</label>
                   <input type="date" id="dob" class="form-control" required>
                   <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-6">
-                  <label for="program" class="form-label">Course / program</label>
+                  <label for="program" class="form-label">Program</label>
                   <select id="program" class="form-select" required>
-                    <option value="">Choose...</option>
+                    <option value="">Choose…</option>
                     <option>BS Computer Science</option>
                     <option>BS Software Engineering</option>
                     <option>BS Information Technology</option>
@@ -242,90 +450,147 @@
                 </div>
                 <div class="col-md-3">
                   <label for="semester" class="form-label">Semester</label>
-                  <input type="number" id="semester" class="form-control" min="1" max="8" placeholder="1 - 8" required>
+                  <input type="number" id="semester" class="form-control" min="1" max="8" placeholder="1–8" required>
                   <div class="invalid-feedback"></div>
                 </div>
                 <div class="col-md-3">
                   <label for="password" class="form-label">Password</label>
-                  <input type="password" id="password" class="form-control" placeholder="Min 6 characters" required>
+                  <input type="password" id="password" class="form-control" placeholder="Min 6 chars" required>
                   <div class="invalid-feedback"></div>
                 </div>
-                <div class="col-12">
-                  <span class="form-label d-block">Gender</span>
-                  <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" id="genderF" value="Female" required><label class="form-check-label" for="genderF">Female</label></div>
-                  <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="gender" id="genderM" value="Male"><label class="form-check-label" for="genderM">Male</label></div>
-                  <div id="genderError" class="text-danger small d-none">Please select your gender.</div>
+                <div class="col-12 mt-4">
+                  <span class="form-label d-block mb-2">Gender</span>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="genderF" value="Female" required>
+                    <label class="form-check-label" for="genderF">Female</label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="gender" id="genderM" value="Male">
+                    <label class="form-check-label" for="genderM">Male</label>
+                  </div>
+                  <div id="genderError" class="text-danger small d-none mt-1">Please select your gender.</div>
                 </div>
                 <div class="col-12">
                   <label for="address" class="form-label">Address <span class="text-muted">(optional)</span></label>
                   <textarea id="address" class="form-control" rows="2" placeholder="Your city and area"></textarea>
                 </div>
-                <div class="col-12">
+                <div class="col-12 mt-4">
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" id="terms" required>
                     <label class="form-check-label" for="terms">I confirm that the information above is correct.</label>
                     <div class="invalid-feedback">You must confirm before registering.</div>
                   </div>
                 </div>
-                <div class="col-12 d-flex flex-wrap gap-2">
-                  <button type="submit" class="btn btn-orange btn-lg"><i class="bi bi-check2-circle"></i> Register</button>
-                  <button type="reset" id="resetBtn" class="btn btn-outline-green btn-lg"><i class="bi bi-eraser"></i> Clear form</button>
+                <div class="col-12 d-flex flex-wrap gap-2 pt-3">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-check2-circle me-1"></i> Register
+                  </button>
+                  <button type="reset" id="resetBtn" class="btn btn-ghost btn-lg">
+                    <i class="bi bi-eraser me-1"></i> Clear
+                  </button>
                 </div>
               </div>
             </form>
           </div>
 
           <div class="col-lg-4">
-            <div class="reg-card h-100">
+            <div class="panel h-100">
               <div class="d-flex justify-content-between align-items-center mb-3">
-                <h3 class="h5 mb-0"><i class="bi bi-person-lines-fill text-green"></i> Registered students</h3>
-                <button id="clearStudents" type="button" class="btn btn-sm btn-outline-danger" title="Remove saved students"><i class="bi bi-trash3"></i></button>
+                <h3 class="h6 mb-0 text-uppercase text-muted fw-bold">
+                  <i class="bi bi-person-lines-fill text-orange me-1"></i> Registered
+                </h3>
+                <button id="clearStudents" type="button" class="btn btn-sm btn-ghost-danger" title="Remove saved students">
+                  <i class="bi bi-trash3"></i>
+                </button>
               </div>
               <div class="table-responsive">
-                <table class="table table-sm table-striped align-middle mb-0">
-                  <thead><tr><th>Name</th><th>Program</th></tr></thead>
+                <table class="table table-sm align-middle mb-0">
+                  <thead>
+                    <tr><th>Name</th><th>Program</th></tr>
+                  </thead>
                   <tbody id="studentTableBody"></tbody>
                 </table>
               </div>
-              <p class="small text-muted mt-3 mb-0"><i class="bi bi-hdd"></i> Saved in this browser using Local Storage.</p>
+              <p class="small text-muted mt-3 mb-0">
+                <i class="bi bi-hdd me-1"></i> Saved locally in this browser.
+              </p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ===== FAQ + CONTACT ===== -->
-    <section id="contact" class="section section-tint">
+    <!-- ========== FAQ + CONTACT ========== -->
+    <section id="contact" class="section section-alt">
       <div class="container">
         <div class="row g-5">
           <div class="col-lg-7">
-            <h2 class="section-title">Frequently asked questions</h2>
+            <div class="section-head mb-4">
+              <span class="section-tag">FAQ</span>
+              <h2 class="section-title mb-1">Frequently Asked Questions</h2>
+            </div>
             <div class="accordion" id="faqAccordion">
               <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">Who can register on the portal?</button></h3>
-                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div class="accordion-body">Any admitted student of the university can register by filling in the form with correct details.</div></div>
+                <h3 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                    Who can register on the portal?
+                  </button>
+                </h3>
+                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Any admitted student of the university can register by filling in the form with correct details.
+                  </div>
+                </div>
               </div>
               <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">Where is my information saved?</button></h3>
-                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Your name, email and program are saved in your own browser (Local Storage). Your password is never stored.</div></div>
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2" aria-expanded="false">
+                    Where is my information saved?
+                  </button>
+                </h3>
+                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Your name, email, and program are saved in your own browser (Local Storage). Your password is never stored.
+                  </div>
+                </div>
               </div>
               <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">How do I find a course quickly?</button></h3>
-                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Use the search box in the Courses section. Type part of the course name or its code.</div></div>
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3" aria-expanded="false">
+                    How do I find a course quickly?
+                  </button>
+                </h3>
+                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Use the search box in the Courses section. Type part of the course name or its code.
+                  </div>
+                </div>
               </div>
               <div class="accordion-item">
-                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">Can I use the portal on my phone?</button></h3>
-                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div class="accordion-body">Yes. The layout adjusts to phones, tablets and desktops, and the menu collapses on small screens.</div></div>
+                <h3 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4" aria-expanded="false">
+                    Can I use the portal on my phone?
+                  </button>
+                </h3>
+                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Yes. The layout adjusts to phones, tablets, and desktops, and the menu collapses on small screens.
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="col-lg-5">
-            <h2 class="section-title">Contact us</h2>
+            <div class="section-head mb-4">
+              <span class="section-tag">Contact</span>
+              <h2 class="section-title mb-1">Get in Touch</h2>
+            </div>
             <ul class="contact-list list-unstyled">
-              <li><i class="bi bi-geo-alt-fill"></i><span>University of Layyah, Layyah, Punjab, Pakistan</span></li>
-              <li><i class="bi bi-envelope-fill"></i><span>info@university.example</span></li>
-              <li><i class="bi bi-telephone-fill"></i><span>+92 300 0000000</span></li>
-              <li><i class="bi bi-clock-fill"></i><span>Monday to Friday, 9:00 AM to 4:00 PM</span></li>
+              <li><i class="bi bi-geo-alt-fill text-orange"></i><span>University of Layyah, Layyah, Punjab, Pakistan</span></li>
+              <li><i class="bi bi-envelope-fill text-green"></i><span>info@university.example</span></li>
+              <li><i class="bi bi-telephone-fill text-orange"></i><span>+92 300 0000000</span></li>
+              <li><i class="bi bi-clock-fill text-green"></i><span>Monday to Friday · 9:00 AM – 4:00 PM</span></li>
             </ul>
           </div>
         </div>
@@ -333,40 +598,51 @@
     </section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- ========== FOOTER ========== -->
   <footer class="site-footer">
     <div class="container d-flex flex-wrap justify-content-between align-items-center gap-2">
       <div class="d-flex align-items-center gap-2">
-        <span class="logo-slot logo-slot-sm"><i class="bi bi-image"></i><img src="images/logo.png" alt="University of Layyah logo" onerror="this.style.display='none'"></span>
-        <span>&copy; 2026 University of Layyah. Web Technologies Lab Task 7.</span>
+        <span class="brand-mark brand-mark-sm bg-orange"><i class="bi bi-mortarboard-fill"></i></span>
+        <span>&copy; <span id="year"></span> University of Layyah · Web Tech Lab</span>
       </div>
-      <div class="footer-icons"><i class="bi bi-facebook"></i><i class="bi bi-youtube"></i><i class="bi bi-linkedin"></i></div>
+      <div class="footer-icons">
+        <a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+      </div>
     </div>
   </footer>
 
-  <!-- ===== CONFIRMATION MODAL ===== -->
+  <!-- ========== MODAL ========== -->
   <div class="modal fade" id="confirmModal" tabindex="-1" aria-labelledby="confirmTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content">
-        <div class="modal-header">
-          <h2 class="modal-title h5" id="confirmTitle"><i class="bi bi-patch-check-fill"></i> Registration confirmed</h2>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        <div class="modal-header border-0 pb-0">
+          <h2 class="modal-title h5 fw-bold" id="confirmTitle">
+            <i class="bi bi-patch-check-fill text-success me-2"></i> Registration Confirmed
+          </h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body">
-          <p class="mb-2">Welcome, <strong id="modalName"></strong>. Your details were saved.</p>
-          <table class="table table-sm mb-0">
-            <tbody>
-              <tr><th>Email</th><td id="modalEmail"></td></tr>
-              <tr><th>Program</th><td id="modalProgram"></td></tr>
-              <tr><th>Semester</th><td id="modalSemester"></td></tr>
-            </tbody>
-          </table>
+        <div class="modal-body pt-3">
+          <p class="mb-3 text-muted">Welcome, <strong id="modalName" class="text-dark"></strong>. Your details were saved successfully.</p>
+          <div class="bg-light p-3 rounded-3">
+            <table class="table table-sm table-borderless mb-0">
+              <tbody>
+                <tr><th class="text-muted w-25">Email</th><td id="modalEmail"></td></tr>
+                <tr><th class="text-muted">Program</th><td id="modalProgram"></td></tr>
+                <tr><th class="text-muted">Semester</th><td id="modalSemester"></td></tr>
+              </tbody>
+            </table>
+          </div>
         </div>
-        <div class="modal-footer"><button type="button" class="btn btn-green" data-bs-dismiss="modal">Done</button></div>
+        <div class="modal-footer border-0 pt-0">
+          <button type="button" class="btn btn-primary w-100" data-bs-dismiss="modal">Done</button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
