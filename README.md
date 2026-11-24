@@ -49,6 +49,5 @@ Students can browse courses, register online, search/filter courses, and manage 
 - 📅 **Today's schedule highlight** — the current weekday row is highlighted automatically
 - 🎨 **Rich hover effects** — cards lift, icons pop, chips fill, enroll button wipes in
 - ♿ **Accessibility** — semantic HTML, `aria-label` on icon buttons, focus-visible outlines, reduced-motion support
-- 🔁 **Duplicate email guard** — the same email cannot register twice
 
 ---
